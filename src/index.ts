@@ -24,7 +24,7 @@ const IMAGE_WIDTH = 360 * 3;  // three pixels per longitude degree
 
 function getSunshineData(lat: number, lon: number): Promise<SunshineData> {
   return new Promise((resolve, reject) => {
-    const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${841f37fa44bb88dd90c0ae1706526539}&exclude=current,minutely,hourly,alerts`;
+    const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${}&exclude=current,minutely,hourly,alerts`;
     https.get(url, (res) => {
       let data = '';
       res.on('data', (chunk) => {
